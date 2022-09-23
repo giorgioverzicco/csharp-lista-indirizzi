@@ -11,7 +11,7 @@ try
     addressesFile = File.OpenText(currentDir + @"\addresses.csv");
     addressesFile.ReadLine(); // skip table headers
 
-    for (int i = 0; !addressesFile.EndOfStream; i++)
+    while (!addressesFile.EndOfStream)
     {
         if (skipLine) continue; // skip wrong rows
 
