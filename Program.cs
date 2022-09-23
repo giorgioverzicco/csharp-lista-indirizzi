@@ -2,13 +2,12 @@
 
 List<Address> addresses = new();
 
-string currentDir = Directory.GetCurrentDirectory();
 StreamReader? addressesFile = null;
 bool skipLine = false;
 
 try
 {
-    addressesFile = File.OpenText(currentDir + @"\addresses.csv");
+    addressesFile = File.OpenText(@"..\..\..\addresses.csv");
     addressesFile.ReadLine(); // skip table headers
 
     while (!addressesFile.EndOfStream)
